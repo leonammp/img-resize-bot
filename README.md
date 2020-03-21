@@ -1,13 +1,13 @@
 # Image Resize BOT
 This script gets all the images on a website and optimizes their width for desktop viewing
 
-# Clone
+## Clone
 git clone https://github.com/leonammp/img-resize-bot.git
 
-# Environment
+## Environment
 Python 3.x
 
-# Running
+## Running
 ```
 python optimizeIMG.py
 ```
