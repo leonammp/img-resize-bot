@@ -100,7 +100,7 @@ class Bot():
 							json.dump(self.config_images, f)
 
 					except Exception as e:
-						print('[ ERRO ] Tentando baixar novamente => ' + img_full_path)
+						print('[ ERRO ] Trying again => ' + img_full_path)
 						urllib.request.urlretrieve(img_url, save_img_path)
 				else:
 					# se já baixou, verifica se a imagem está aparecento maior na tela
@@ -108,7 +108,7 @@ class Bot():
 					if self.config_images[img_full_path]['img_width'] < img_width:
 						self.config_images[img_full_path]['img_width'] = img_width 
 
-		print('DOWNLOAD CONCLUÍDO')
+		print('DOWNLOAD COMPLETED')
 
 	# redimenciona as imagens encontradas em todas as urls
 	def resize_imgs(self):
@@ -123,9 +123,9 @@ class Bot():
 			hsize = int((float(img.size[1]) * float(wpercent)))
 			img = img.resize((img_width, hsize), Image.ANTIALIAS)
 			img.save(save_img_path)
-		print('RESIZE CONCLUÍDO')
+		print('RESIZE COMPLETED')
 
 
 if __name__ == '__main__':
-	url = input('Insira a URL: ')
+	url = input('Enter the URL: ')
 	Bot(url)
