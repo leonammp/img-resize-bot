@@ -15,7 +15,7 @@ class Bot():
 		# lista de urls percorridas
 		self.crawled_urls = []
 		# webdriver
-		self.chrome = webdriver.Chrome('/path/to/driver') # coloque a pasta onde baixou o driver
+		self.chrome = webdriver.Chrome('./chromedriver') # coloque a pasta onde baixou o driver
 		# diretorio atual do arquivo python
 		self.current_path = os.getcwd()
 		# informações das imagens
